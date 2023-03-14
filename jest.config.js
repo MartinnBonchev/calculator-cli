@@ -4,7 +4,6 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
   verbose: true,
-  automock: true,
   moduleNameMapper: {
     "^@root/(.*)$": "<rootDir>/$1",
     "^@main/(.*)$": "<rootDir>/src/main/$1",
