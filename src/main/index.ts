@@ -1,4 +1,3 @@
-// TODO: Add aliases
 import concatNumber from "@utils/concat-number";
 import errorBoundary from "@utils/error-boundary";
 import findClosingParenthesis from "@utils/find-closing-parentheses";
@@ -6,7 +5,7 @@ import getValidExpression from "@utils/get-valid-expression";
 
 const button = document.querySelector("button") as HTMLButtonElement;
 
-function operate(stack: number[], operator: string, digit: number) {
+export function operate(stack: number[], operator: string, digit: number) {
   switch (operator) {
     case "+": {
       return [...stack, digit];
@@ -30,7 +29,7 @@ function operate(stack: number[], operator: string, digit: number) {
   }
 }
 
-function evaluateExpression(
+export default function evaluateExpression(
   expression: string,
   stack: number[] = [],
   operator: string = "+",
