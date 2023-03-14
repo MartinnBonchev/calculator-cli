@@ -4,7 +4,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/ts/index.ts", "./src/css/styles.css"],
+  entry: ["./src/index.ts", "./src/css/styles.css"],
   devtool: "inline-source-map",
   module: {
     rules: [
