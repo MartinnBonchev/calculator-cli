@@ -1,7 +1,7 @@
-const TEST_EXPRESSION_PATTERN =
-  /^(\d|(\(+\d+)*)+([+\-*/]?(\d+|(\(+\d+))|\))*$/g;
-
 export default function getValidExpression(expression: string) {
+  const TEST_EXPRESSION_PATTERN =
+    /^(\d|(\(+\d+)*)+([+\-*/]?(\d+|(\(+\d+))|\))*$/g;
+
   if (expression.length === 0) {
     throw new Error("Please provide an input!");
   }
