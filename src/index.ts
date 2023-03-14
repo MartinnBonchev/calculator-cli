@@ -15,13 +15,15 @@ export default function calculateExpression() {
     return;
   }
 
-  const escapedSpacesExpression = input.value.replace(/\s/g, "");
+  // Escape spaces in expression
+  const escapedSpacesExpression = input.value.replace(/\s+/g, "");
+
   const { data: validExpression, error } = errorBoundary(() =>
     getValidExpression(escapedSpacesExpression)
   );
 
   if (error) {
-    resultParagraph.textContent = error;
+    resultParagraph.textContent = error.message;
   }
 
   if (validExpression) {
