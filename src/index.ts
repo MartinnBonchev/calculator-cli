@@ -32,4 +32,4 @@ export default function calculateExpression() {
   }
 }
 
-button.addEventListener("click", calculateExpression);
+button.addEventListener("click", calculateExpression, false);
