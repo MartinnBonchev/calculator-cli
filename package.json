@@ -6,7 +6,7 @@
   "author": "Martin Bonchev <martin.bonchevv@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open",
     "test": "jest",
     "build": "webpack --mode production",
     "prepare": "husky install"
