@@ -1,8 +1,8 @@
 {
-  "name": "c-calculator",
+  "name": "expression-calculator",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "repository": "https://github.com/MartinnBonchev/calculator-cli.git",
+  "repository": "https://github.com/MartinnBonchev/expression-calculator.git",
   "author": "Martin Bonchev <martin.bonchevv@gmail.com>",
   "license": "MIT",
   "scripts": {
