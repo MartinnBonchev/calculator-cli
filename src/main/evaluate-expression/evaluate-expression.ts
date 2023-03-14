@@ -1,9 +1,5 @@
 import concatNumber from "@utils/concat-number";
-import errorBoundary from "@utils/error-boundary";
 import findClosingParenthesis from "@utils/find-closing-parentheses";
-import getValidExpression from "@utils/get-valid-expression";
-
-const button = document.querySelector("button") as HTMLButtonElement;
 
 export function operate(stack: number[], operator: string, digit: number) {
   switch (operator) {
@@ -84,29 +80,4 @@ export default function evaluateExpression(
   );
 }
 
-function calculateExpression() {
-  const resultParagraph = document.querySelector<HTMLParagraphElement>(
-    ".calculator__result"
-  );
-  const input = document.querySelector<HTMLInputElement>("input");
 
-  // Handle not found elements
-  if (!resultParagraph || !input) {
-    return;
-  }
-
-  const { data: validExpression, error } = errorBoundary(() =>
-    getValidExpression(input.value)
-  );
-
-  if (error) {
-    resultParagraph.textContent = error;
-  }
-
-  if (validExpression) {
-    const result = evaluateExpression(validExpression);
-    resultParagraph.textContent = `Result: ${result}`;
-  }
-}
-
-button.addEventListener("click", calculateExpression);
