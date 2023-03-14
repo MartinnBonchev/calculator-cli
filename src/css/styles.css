@@ -42,13 +42,14 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 16px;
   width: 100%;
   padding: 0 24px;
 }
 
 .calculator__container__expression-input {
   height: 48px;
-  width: 256px;
+  width: 100%;
   border: 1px solid #3c84ab;
   border-radius: 12px;
   padding: 12px;
@@ -57,7 +58,7 @@ input {
 
 .calculator__container__calc-button {
   height: 48px;
-  width: 172px;
+  width: 100%;
   border: 1px solid #3c84ab;
   font-size: 16px;
   border-radius: 12px;
@@ -68,4 +69,5 @@ input {
 
 .calculator__result {
   font-size: 24px;
+  padding: 0 24px;
 }
