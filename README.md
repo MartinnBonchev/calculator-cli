@@ -3,7 +3,7 @@
     Clone this repository.
 
     ```
-    git clone https://github.com/MartinnBonchev/c-calculator.git
+    git clone https://github.com/MartinnBonchev/expression-calculator.git
     ```
 
     Install dependencies.
