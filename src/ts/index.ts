@@ -1,8 +1,8 @@
 // TODO: Add aliases
-import concatNumber from "../utils/concat-number";
-import errorBoundary from "../utils/error-boundary";
-import findClosingParenthesis from "../utils/find-closing-parentheses";
-import getValidExpression from "../utils/get-valid-expression";
+import concatNumber from "@utils/concat-number";
+import errorBoundary from "@utils/error-boundary";
+import findClosingParenthesis from "@utils/find-closing-parentheses";
+import getValidExpression from "@utils/get-valid-expression";
 
 const button = document.querySelector("button") as HTMLButtonElement;
 
