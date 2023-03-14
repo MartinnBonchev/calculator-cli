@@ -28,8 +28,7 @@ export function operate(stack: number[], operator: string, digit: number) {
 export default function evaluateExpression(
   expression: string,
   stack: number[] = [],
-  operator: string = "+",
-  index: number = 0
+  operator: string = "+"
 ): number {
   const currentChar = expression[0];
 
@@ -38,31 +37,24 @@ export default function evaluateExpression(
   }
 
   if (currentChar === "(") {
-    const closingIndex = findClosingParenthesis(expression.substring(index));
+    const closingIndex = findClosingParenthesis(expression.substring(0));
     const innerExpression = expression.substring(1, closingIndex);
     const evaluatedInnerExpression = evaluateExpression(
       innerExpression,
       [],
-      "+",
-      index
+      "+"
     );
     const newStack = operate(stack, operator, evaluatedInnerExpression);
 
     return evaluateExpression(
       expression.substring(closingIndex + 1),
       newStack,
-      operator,
-      index
+      operator
     );
   }
 
   if (/\+|\-|\*|\//.test(currentChar)) {
-    return evaluateExpression(
-      expression.substring(1),
-      stack,
-      currentChar,
-      index
-    );
+    return evaluateExpression(expression.substring(1), stack, currentChar);
   }
 
   const [concatenatedNumber, numberOfDigits] = concatNumber(
@@ -75,9 +67,6 @@ export default function evaluateExpression(
   return evaluateExpression(
     expression.substring(numberOfDigits),
     newStack,
-    operator,
-    index
+    operator
   );
 }
-
-
