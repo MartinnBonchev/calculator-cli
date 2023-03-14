@@ -50,6 +50,6 @@ module.exports = {
     compress: true,
     liveReload: true,
     hot: true,
-    port: 3001,
+    port: 3030,
   },
 };
