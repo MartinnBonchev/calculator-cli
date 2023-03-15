@@ -25,7 +25,8 @@ input {
 .calculator {
   border: 2px solid #3c84ab;
   border-radius: 32px;
-  min-width: 500px;
+  margin: 16px;
+  padding: 32px;
   min-height: 300px;
   display: flex;
   align-items: center;
@@ -36,6 +37,7 @@ input {
 
 .calculator__title {
   font-size: 32px;
+  text-align: center;
 }
 
 .calculator__container {
@@ -44,7 +46,6 @@ input {
   justify-content: space-around;
   gap: 16px;
   width: 100%;
-  padding: 0 24px;
 }
 
 .calculator__container__expression-input {
@@ -70,4 +71,29 @@ input {
 .calculator__result {
   font-size: 24px;
   padding: 0 24px;
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+  .calculator {
+    padding: 24px;
+    max-width: 400px;
+    min-width: 300px;
+  }
+
+  .calculator__container {
+    flex-direction: column;
+  }
+
+  .calculator__title {
+    font-size: 20px;
+  }
+}
+
+/* Galaxy Fold */
+@media screen and (max-width: 280px) {
+  .calculator {
+    padding: 16px;
+    min-width: 260px;
+  }
 }
