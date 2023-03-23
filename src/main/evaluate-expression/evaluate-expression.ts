@@ -30,11 +30,11 @@ export default function evaluateExpression(
   stack: number[] = [],
   operator: string = "+"
 ): number {
-  const token = expression[0];
-
   if (expression.length === 0) {
     return stack.reduce((acc, curr) => acc + curr, 0);
   }
+
+  const token = expression[0];
 
   if (token === "(") {
     const closingIndex = findClosingParenthesis(expression);
