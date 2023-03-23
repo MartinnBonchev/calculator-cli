@@ -30,13 +30,13 @@ export default function evaluateExpression(
   stack: number[] = [],
   operator: string = "+"
 ): number {
-  const currentChar = expression[0];
+  const token = expression[0];
 
   if (expression.length === 0) {
     return stack.reduce((acc, curr) => acc + curr, 0);
   }
 
-  if (currentChar === "(") {
+  if (token === "(") {
     const closingIndex = findClosingParenthesis(expression.substring(0));
     const innerExpression = expression.substring(1, closingIndex);
     const evaluatedInnerExpression = evaluateExpression(
@@ -53,13 +53,13 @@ export default function evaluateExpression(
     );
   }
 
-  if (/\+|\-|\*|\//.test(currentChar)) {
-    return evaluateExpression(expression.substring(1), stack, currentChar);
+  if (/\+|\-|\*|\//.test(token)) {
+    return evaluateExpression(expression.substring(1), stack, token);
   }
 
   const [concatenatedNumber, numberOfDigits] = concatNumber(
     expression.substring(1),
-    currentChar
+    token
   );
 
   const newStack = operate(stack, operator, concatenatedNumber);
