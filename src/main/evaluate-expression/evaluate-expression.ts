@@ -37,7 +37,7 @@ export default function evaluateExpression(
   }
 
   if (token === "(") {
-    const closingIndex = findClosingParenthesis(expression.substring(0));
+    const closingIndex = findClosingParenthesis(expression);
     const innerExpression = expression.substring(1, closingIndex);
     const evaluatedInnerExpression = evaluateExpression(
       innerExpression,
